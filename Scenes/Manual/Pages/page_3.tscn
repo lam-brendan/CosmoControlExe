@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://bba571je5df3g"]
+
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="1_go3a3"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="2_sntwt"]
+
+[node name="Page3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_go3a3")
+theme_override_font_sizes/font_size = 40
+text = "Section 1: Operations"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.44
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("2_sntwt")
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Working at a checkpoint can be more challenging than most may think. This manual will instruct you on how to properly do your duties.
+
+Your job is to use the information in this manual to cross reference with information given by the inhabitants passing through the checkpoint.
+
+All passersby will provide you with a Visa stating their reason for travel and an piece of ID which will identify them.
+
+Each document has specific information you must verify. "
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sntwt")
+theme_override_font_sizes/font_size = 20
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1

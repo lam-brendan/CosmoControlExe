@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://fo5kypm660ad"]
+
+[ext_resource type="Texture2D" uid="uid://8jf8jp4r4y2u" path="res://Art/icon.svg" id="1_d7lyn"]
+
+[node name="PageSpecies" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_d7lyn")
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 26
+text = "Sector Name: Inverse Null
+
+A star sector on the other side of a black hole. People they feel like something stares back out at them while peering into the black hole where this star sector is located.
+
+"
+fit_content = true
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_d7lyn")
+stretch_mode = 4
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 26
+text = "Sector Name: Synthesia IV
+
+Star sector with indigenous marine and plant type alien species. Recently signed a treaty for better relations by establishing a standard on star sector insignias to symbolize union between star sectors."
+fit_content = true

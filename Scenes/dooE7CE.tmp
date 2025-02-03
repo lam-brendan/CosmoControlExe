@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://oisoimw0qruc"]
+
+[ext_resource type="Script" path="res://Scripts/door_lock.gd" id="1_cql56"]
+[ext_resource type="Theme" uid="uid://bt2h240jiitb4" path="res://Themes/door_lock_button.tres" id="2_6nbu0"]
+[ext_resource type="ButtonGroup" uid="uid://con3elqprtfc5" path="res://door_lock_button_group.tres" id="3_jwr6u"]
+[ext_resource type="Theme" uid="uid://cxxxe2bu50602" path="res://Themes/door_unlock_button.tres" id="4_6r06t"]
+
+[node name="DoorLock" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cql56")
+
+[node name="lock_button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 133.0
+offset_bottom = 130.0
+theme = ExtResource("2_6nbu0")
+disabled = true
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("3_jwr6u")
+
+[node name="unlock_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_right = 346.0
+offset_bottom = 130.0
+theme = ExtResource("4_6r06t")
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("3_jwr6u")
+
+[connection signal="pressed" from="lock_button" to="." method="_on_door_lock_button_pressed"]
+[connection signal="pressed" from="unlock_button" to="." method="_on_door_unlock_button_pressed"]

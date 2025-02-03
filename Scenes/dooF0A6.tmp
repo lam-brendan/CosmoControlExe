@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://oisoimw0qruc"]
+
+[ext_resource type="Theme" uid="uid://bt2h240jiitb4" path="res://Themes/door_lock_button_open.tres" id="2_ynxd1"]
+
+[sub_resource type="GDScript" id="GDScript_dan3u"]
+script/source = "extends Node2D
+
+
+func _on_door_lock_button_pressed():
+	lock_button.disabled = true
+"
+
+[node name="DoorLock" type="Node2D"]
+script = SubResource("GDScript_dan3u")
+
+[node name="lock_button" type="Button" parent="."]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 134.0
+offset_bottom = 129.0
+theme = ExtResource("2_ynxd1")
+
+[connection signal="pressed" from="lock_button" to="." method="_on_door_lock_button_pressed"]

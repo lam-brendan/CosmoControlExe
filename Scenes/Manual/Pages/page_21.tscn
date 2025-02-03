@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq5k8ehch0kjl"]
+
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="1_6gmx4"]
+[ext_resource type="Texture2D" uid="uid://cgim1q2d0gke2" path="res://Art/Aliens/Marine/squid_yes1.png" id="1_bhsoc"]
+[ext_resource type="Texture2D" uid="uid://ctfr0d83rct5m" path="res://Art/SpeciesSymbol/SpeciesSymbol_Marquatic.png" id="2_8qsbl"]
+
+[node name="Page21" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_6gmx4")
+theme_override_font_sizes/font_size = 40
+text = "Marquatics"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Container" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Container"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+offset_top = 4.0
+offset_right = 620.0
+offset_bottom = 304.0
+texture = ExtResource("1_bhsoc")
+expand_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Container"]
+layout_mode = 0
+offset_left = 441.0
+offset_top = -5.0
+offset_right = 615.0
+offset_bottom = 170.0
+texture = ExtResource("2_8qsbl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1

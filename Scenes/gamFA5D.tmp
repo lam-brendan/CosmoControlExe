@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://brb24fw4kgnco"]
+
+[ext_resource type="Texture2D" uid="uid://2oahden1suhk" path="res://Art/BG/bg_space2.png" id="1_5yufo"]
+[ext_resource type="Texture2D" uid="uid://cgesxe5wp6d3y" path="res://Art/BG/ship_wall_merged.png" id="2_8p8df"]
+[ext_resource type="Script" path="res://Scenes/alien_test.gd" id="3_co8ut"]
+
+[node name="game" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="space_texture" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 3840.0
+offset_bottom = 2160.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5yufo")
+
+[node name="ship_wall_texture" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_8p8df")
+
+[node name="alien_test" type="Node2D" parent="."]
+script = ExtResource("3_co8ut")
+
+[node name="Sprite2D" type="Sprite2D" parent="alien_test"]

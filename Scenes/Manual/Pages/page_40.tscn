@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1i2qtj223y1y"]
+
+[ext_resource type="Texture2D" uid="uid://b4ctm7sxwaavq" path="res://Art/Stamp/StampOfficial_1.png" id="1_66dna"]
+[ext_resource type="Texture2D" uid="uid://cx2jimv470lsf" path="res://Art/Stamp/StampOfficial_2.png" id="2_e1tdk"]
+[ext_resource type="Texture2D" uid="uid://epl3bcex4jpv" path="res://Art/Stamp/StampOfficial_3.png" id="3_5sakk"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="4_c1wot"]
+
+[node name="Page40" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_66dna")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_e1tdk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_5sakk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_c1wot")
+theme_override_font_sizes/font_size = 20
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1

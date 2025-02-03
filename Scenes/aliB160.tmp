@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0kyfsrtu5ifk"]
+
+[ext_resource type="Texture2D" uid="uid://c8axchvwp7eh3" path="res://Art/Temp Aliens/temp_alien_amorphous.png" id="1_x660g"]
+[ext_resource type="Script" path="res://scripts/alien_move.gd" id="2_13ntk"]
+
+[sub_resource type="Curve2D" id="Curve2D_ff2og"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 1700, 20)
+}
+point_count = 2
+
+[node name="alien" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(26, 0)
+curve = SubResource("Curve2D_ff2og")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(0, 20)
+
+[node name="alien_move" type="Sprite2D" parent="Path2D/PathFollow2D"]
+texture = ExtResource("1_x660g")
+offset = Vector2(0, 50)
+script = ExtResource("2_13ntk")
+
+[node name="Timer" type="Timer" parent="Path2D/PathFollow2D"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Path2D/PathFollow2D/Timer" to="Path2D/PathFollow2D/alien_move" method="_on_timer_timeout"]
+[connection signal="tree_exited" from="Path2D/PathFollow2D/Timer" to="Path2D/PathFollow2D/alien_move" method="_on_timer_tree_exited"]

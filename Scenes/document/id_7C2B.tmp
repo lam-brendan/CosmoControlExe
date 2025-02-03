@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsi34eu13xsro"]
+
+[ext_resource type="Script" path="res://Scripts/document/id_card.gd" id="1_qfvw3"]
+[ext_resource type="Texture2D" uid="uid://dwk4rc0km3ro7" path="res://Art/Doc/miniCard_A.png" id="2_5q6j6"]
+[ext_resource type="PackedScene" uid="uid://hpso33losfxa" path="res://Scenes/document/id_panel.tscn" id="3_1to00"]
+
+[node name="id_card" type="Control"]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 9.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qfvw3")
+
+[node name="id_sprite" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.431958
+anchor_top = 0.900963
+anchor_right = 0.565958
+anchor_bottom = 0.987963
+offset_left = 0.639954
+offset_top = -0.0400391
+offset_right = -0.640015
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_5q6j6")
+metadata/_edit_use_anchors_ = true
+
+[node name="id_button" type="TextureButton" parent="id_sprite"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 253.0
+offset_bottom = 93.0
+
+[node name="id_panel" parent="." instance=ExtResource("3_1to00")]
+layout_mode = 1
+offset_left = 7.0
+offset_top = -8.0
+offset_right = 7.0
+offset_bottom = -11.0
+
+[node name="id_panel_button" type="Button" parent="id_panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.47265
+anchor_top = -0.996094
+anchor_right = 3.67578
+anchor_bottom = -0.792969
+offset_right = 8.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="id_sprite/id_button" to="." method="_on_id_button_pressed"]
+[connection signal="gui_input" from="id_panel" to="." method="_on_id_panel_gui_input"]
+[connection signal="pressed" from="id_panel/id_panel_button" to="." method="_on_id_panel_button_pressed"]

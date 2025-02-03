@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvkvk8hl06mm0"]
+
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="1_tydtr"]
+[ext_resource type="Texture2D" uid="uid://bmakx7hfwxm7f" path="res://Art/Utilities/ship_guidebook.png" id="1_xvsph"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="3_uyg4t"]
+
+[node name="Page11" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_tydtr")
+theme_override_font_sizes/font_size = 40
+text = "Guidebook/Manual"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("1_xvsph")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uyg4t")
+theme_override_font_sizes/font_size = 20
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1

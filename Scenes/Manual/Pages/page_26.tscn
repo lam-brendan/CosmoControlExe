@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://3bf48f8b0dy4"]
+
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="1_8ihhe"]
+[ext_resource type="FontFile" uid="uid://chdx0rgxtl8rn" path="res://fonts/TT Interphases Pro Trial Italic.ttf" id="2_o64bl"]
+[ext_resource type="FontFile" uid="uid://dyobdtv742aeo" path="res://fonts/TT Interphases Pro Trial Bold Italic.ttf" id="3_swi7i"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="4_uygo2"]
+
+[node name="Page26" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("1_8ihhe")
+theme_override_fonts/italics_font = ExtResource("2_o64bl")
+theme_override_fonts/bold_italics_font = ExtResource("3_swi7i")
+theme_override_fonts/bold_font = ExtResource("4_uygo2")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[b]Species Name:[/b] Amorphia
+
+[b]Characteristics[/b]: Amorphia species are unique in the sense that they lack a proper skeletal structure in their bodies. This results in a structureless-like organism in which their physique is flexible and interchangeable.
+
+[b]About:[/b] They often change shape and structure based on their needs, such as fitting into small holes or reaching high up for an item.
+
+Due to previous incidents, please refrain from using them as a slingshot. 
+
+[b]NOTE:[/b] The Amorphia can take on almost any colour due to their shifting nature, but they [b][i]avoid ever being the color blue.[/i][/b]"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_8ihhe")
+theme_override_font_sizes/font_size = 20
+text = "26"
+horizontal_alignment = 1
+vertical_alignment = 1

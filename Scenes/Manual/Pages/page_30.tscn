@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv21vdpbk1elu"]
+
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="1_4sdj4"]
+[ext_resource type="FontFile" uid="uid://chdx0rgxtl8rn" path="res://fonts/TT Interphases Pro Trial Italic.ttf" id="2_7spmy"]
+[ext_resource type="FontFile" uid="uid://dyobdtv742aeo" path="res://fonts/TT Interphases Pro Trial Bold Italic.ttf" id="3_d160h"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="4_cc7ws"]
+
+[node name="Page30" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("1_4sdj4")
+theme_override_fonts/italics_font = ExtResource("2_7spmy")
+theme_override_fonts/bold_italics_font = ExtResource("3_d160h")
+theme_override_fonts/bold_font = ExtResource("4_cc7ws")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[b]Species Name:[/b] Artiodactyl
+
+[b]Characteristics[/b]: IRIS has concluded that Artiodactyl species are the only aliens that possess horn like features that are not seen on any other species. 
+
+[b]About:[/b] Artiodactyls are a species of alien which originated from a distant planet. Due to their home planet's harsh environment of rocky landscape, their evolution cycle proceeded to adopt horns to break through brittle rock to traverse the environment. The size of an Artiodactyl’s horn is tied to their age
+
+[b]NOTE:[/b]  [b][i]Artiodactyls are almost always natural in hue and medium-to-low in colour saturation[/i][/b], due to their evolution and diet.
+"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_4sdj4")
+theme_override_font_sizes/font_size = 20
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://cafcosbsddvma"]
+
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="1_meolo"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="2_ronyx"]
+[ext_resource type="FontFile" uid="uid://chdx0rgxtl8rn" path="res://fonts/TT Interphases Pro Trial Italic.ttf" id="3_e6wuw"]
+[ext_resource type="FontFile" uid="uid://dyobdtv742aeo" path="res://fonts/TT Interphases Pro Trial Bold Italic.ttf" id="4_0im2w"]
+
+[node name="Page35" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_meolo")
+theme_override_font_sizes/font_size = 40
+text = "Section 4: Documents"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.44
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("2_ronyx")
+theme_override_fonts/italics_font = ExtResource("3_e6wuw")
+theme_override_fonts/bold_italics_font = ExtResource("4_0im2w")
+theme_override_fonts/bold_font = ExtResource("1_meolo")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "When passerbys pass through the checkpoint, they will provide you with two pieces of documents for your review.
+
+[b]ID Card[/b] - This piece of document’s purpose is issued to all alien inhabitants, which proves their identification and provides proof of citizenship. Aliens without an ID card are obligated to contact IRIS to be issued with one.
+
+[b]Travel Visa[/b] - This document informs you of the reason of travel for the alien, and any necessary information that is essential for this alien to continue through the checkpoint. All aliens must provide this document under any circumstance.
+"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ronyx")
+theme_override_font_sizes/font_size = 20
+text = "35"
+horizontal_alignment = 1
+vertical_alignment = 1

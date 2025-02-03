@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://c46tt7ulvl2fk"]
+
+[ext_resource type="Texture2D" uid="uid://dwk4rc0km3ro7" path="res://Art/Doc/miniCard_A.png" id="1_dtb3g"]
+[ext_resource type="Texture2D" uid="uid://bpyala5yk0ct7" path="res://Art/Doc/miniVisa_A.png" id="2_t6yhw"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="3_jgj1q"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="4_5rgf5"]
+
+[node name="Page36" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_dtb3g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_t6yhw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -10
+theme_override_fonts/normal_font = ExtResource("3_jgj1q")
+theme_override_fonts/bold_font = ExtResource("4_5rgf5")
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[center][b]ID Card Fields[/b]
+
+
+Name of Traveller
+
+Species of Traveller
+
+Starsector of Traveller
+
+Expiration Date
+
+Stamp Certification
+
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -10
+theme_override_fonts/normal_font = ExtResource("3_jgj1q")
+theme_override_fonts/bold_font = ExtResource("4_5rgf5")
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[center][b]Travel Visa Fields[/b]
+
+
+Name of Traveller
+
+Species of Traveller
+
+Starsetor of Traveller
+
+Expiration Date
+
+Boarding Date
+
+Purpose of Visit
+
+Pattern Sequence
+"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jgj1q")
+theme_override_font_sizes/font_size = 20
+text = "36"
+horizontal_alignment = 1
+vertical_alignment = 1

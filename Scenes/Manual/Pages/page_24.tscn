@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dba1c6dd055el"]
+
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="1_p14q2"]
+[ext_resource type="FontFile" uid="uid://chdx0rgxtl8rn" path="res://fonts/TT Interphases Pro Trial Italic.ttf" id="2_8it1q"]
+[ext_resource type="FontFile" uid="uid://dyobdtv742aeo" path="res://fonts/TT Interphases Pro Trial Bold Italic.ttf" id="3_3arp5"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="4_amvjc"]
+
+[node name="Page24" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("1_p14q2")
+theme_override_fonts/italics_font = ExtResource("2_8it1q")
+theme_override_fonts/bold_italics_font = ExtResource("3_3arp5")
+theme_override_fonts/bold_font = ExtResource("4_amvjc")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[b]Species Name:[/b] Offalis
+
+[b]Characteristics[/b]: Offalis tend to appear very flesh like, which can vary between zero exposure to extreme exposure of inner tissue and flesh like meat.
+
+[b]About:[/b] This variation is due to their tendency to evolve and adapt in different environments, and thus humanoids throughout the galaxy vary depending on their home planet.
+
+Despite having the most variation in a species, Offalis seem to possess extremely unnerving physical physiques or extremely boorish physical physiques.
+
+[b]NOTE:[/b] The Offalis tend to vary in colours, but a [b][i]green Offalis has never been documented. [/i][/b]
+ocumented. [/i][/b]"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_p14q2")
+theme_override_font_sizes/font_size = 20
+text = "24"
+horizontal_alignment = 1
+vertical_alignment = 1

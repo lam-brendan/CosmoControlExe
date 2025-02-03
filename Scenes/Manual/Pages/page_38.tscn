@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0vh6m2fv5mbi"]
+
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="1_g6wjn"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="2_0gqs4"]
+
+[node name="Page38" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.44
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("1_g6wjn")
+theme_override_fonts/bold_font = ExtResource("2_0gqs4")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[b]Expiration Date[/b] - Ensure the document’s expiration date is not before the current date. Any document that is expired is considered void.
+
+[b]Reason of Visit[/b] - Ensure that the reason of visit stated on the document aligns with the alien’s reason upon inquiry. Please use proper judgement when required.
+
+[b]Boarding Date[/b] - Ensure that the boarding date is the same as the current date, else this document is considered void.
+
+To reiterate, ensure that all legal information on documents correctly match if they have the same field. E.g.) Name on both documents must be the exact same."
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_g6wjn")
+theme_override_font_sizes/font_size = 20
+text = "38"
+horizontal_alignment = 1
+vertical_alignment = 1

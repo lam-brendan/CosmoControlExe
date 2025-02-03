@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cqyrpjc1cp38i"
+path="res://.godot/imported/fax machine click mask.png-55a35a9678101158c31747717a1ddb8c.res"
+
+[deps]
+
+source_file="res://Art/Utilities/fax machine click mask.png"
+dest_files=["res://.godot/imported/fax machine click mask.png-55a35a9678101158c31747717a1ddb8c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

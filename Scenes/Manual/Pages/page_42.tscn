@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://dogroau8741p0"]
+
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="1_gk6mj"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="2_513ei"]
+[ext_resource type="FontFile" uid="uid://chdx0rgxtl8rn" path="res://fonts/TT Interphases Pro Trial Italic.ttf" id="3_yodsj"]
+[ext_resource type="FontFile" uid="uid://dyobdtv742aeo" path="res://fonts/TT Interphases Pro Trial Bold Italic.ttf" id="4_sko7m"]
+
+[node name="Page42" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_gk6mj")
+theme_override_font_sizes/font_size = 40
+text = "Pattern Restrictions"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.44
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -5
+theme_override_fonts/normal_font = ExtResource("2_513ei")
+theme_override_fonts/italics_font = ExtResource("3_yodsj")
+theme_override_fonts/bold_italics_font = ExtResource("4_sko7m")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "Patterns will consist of five shapes, easily recognizable to your eye. These sequences have a set of rules which must be followed, listed below.
+
+1. A ■ must never be directly between two ▲.
+
+2. The number of ● must never exceeds ▲.
+
+3. ◆ must never start a sequence. If they do, it must be the only one in the sequence.
+
+4. A sequence must always contain 8 shapes.
+
+5. ⬟ inherit ▲ rules if there are no ▲.
+
+
+[i]Any sequence that violates these rules automatically deem the document void.[/i]"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_513ei")
+theme_override_font_sizes/font_size = 20
+text = "42"
+horizontal_alignment = 1
+vertical_alignment = 1

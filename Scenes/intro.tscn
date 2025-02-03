@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://chiccy6agc20l"]
+
+[ext_resource type="Script" path="res://Scripts/intro.gd" id="1_m8ac0"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="1_qnpp0"]
+
+[node name="intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m8ac0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 3840.0
+offset_bottom = 2160.0
+scale = Vector2(0.5, 0.5)
+color = Color(0.0339948, 0.0427282, 0.0652268, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -640.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.529412, 0.760784, 0.901961, 0.270588)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 44.0
+offset_right = -44.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_qnpp0")
+theme_override_font_sizes/normal_font_size = 50
+text = "*Ring* *Ring* 
+
+\"...Hey, so uh ... I heard you were the new hire.
+It's been a while since we had a new employee and I'm not qualified to be training you so I went and dug out an old manual we had lying around. 
+I've left it on the shelf for you so you should be able to refer to that if you're confused about anything. 
+
+Anyways, good luck....\"
+
+
+"

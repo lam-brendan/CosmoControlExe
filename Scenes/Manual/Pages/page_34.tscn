@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwa2qti807ayj"]
+
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="1_wooav"]
+[ext_resource type="FontFile" uid="uid://chdx0rgxtl8rn" path="res://fonts/TT Interphases Pro Trial Italic.ttf" id="2_neut1"]
+[ext_resource type="FontFile" uid="uid://dyobdtv742aeo" path="res://fonts/TT Interphases Pro Trial Bold Italic.ttf" id="3_6oxd5"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="4_r0k8k"]
+
+[node name="Page34" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("1_wooav")
+theme_override_fonts/italics_font = ExtResource("2_neut1")
+theme_override_fonts/bold_italics_font = ExtResource("3_6oxd5")
+theme_override_fonts/bold_font = ExtResource("4_r0k8k")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[b]Species Name:[/b] Mechanica
+
+[b]Characteristics[/b]: Non organic species which in fact, look very manufactured. These species originate from the planet Hydraxia, known for their mechanics and specialized alloy making.
+
+[b]About:[/b] Mechanical species mainlypossess structures crafted out of alloy originating from their home planet with special properties that imbue them with sentience. 
+
+IRIS suspects that their species most likely evolves from technological advancements from their factories and hardware labs.
+
+[b]NOTE:[/b]  Mechanica aliens are typically observed with alloys that mimic Earth-like metals. However, if an agent comes in contact with a Mechanica life form that has [i]failed this mimicry[/i], proceed with caution and call for assistance immediately.
+
+"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "34"
+horizontal_alignment = 1
+vertical_alignment = 1

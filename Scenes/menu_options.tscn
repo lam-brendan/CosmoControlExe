@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyxxr6l5pv8pk"]
+
+[ext_resource type="Script" path="res://Scripts/menu_options.gd" id="1_gdare"]
+[ext_resource type="Shader" path="res://Scripts/menu_options.gdshader" id="2_21vem"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w8i16"]
+shader = ExtResource("2_21vem")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_8yo87"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_knnx1"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dtcf3"]
+_data = {
+"RESET": SubResource("Animation_8yo87"),
+"blur": SubResource("Animation_knnx1")
+}
+
+[node name="menu_options" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_gdare")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_w8i16")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -100.0
+offset_right = 125.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="buttom_ resume" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resume"
+
+[node name="button_restart" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Restart"
+
+[node name="button_quit" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[node name="HSlider" type="HSlider" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HSlider"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = 1.0
+offset_right = 125.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Volume
+"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dtcf3")
+}
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/buttom_ resume" to="." method="_on_buttom__resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/button_restart" to="." method="_on_button_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/button_quit" to="." method="_on_button_quit_pressed"]

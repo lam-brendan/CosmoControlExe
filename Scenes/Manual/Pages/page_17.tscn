@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfeko827xfv8f"]
+
+[ext_resource type="Texture2D" uid="uid://ddfw4oo2jndo2" path="res://Art/StarSectorSymbol/StarSec_Triangle1.png" id="1_d4bvf"]
+[ext_resource type="Texture2D" uid="uid://2tm1wc2awg27" path="res://Art/StarSectorSymbol/StarSec_Triangle2.png" id="2_uq2ab"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="3_i0ja5"]
+
+[node name="Page17" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 45
+columns = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_d4bvf")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_uq2ab")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("3_i0ja5")
+theme_override_font_sizes/normal_font_size = 23
+text = "Sector Name: Pythagoria
+
+Star sector in which many of the planets are home to industry, providing other star sectors with raw and manufactured material through trade.
+
+Planets: L3M 0-SIIV, INU VII K, 42-RMA"
+fit_content = true
+
+[node name="PageNum" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_i0ja5")
+theme_override_font_sizes/font_size = 20
+text = "17"
+horizontal_alignment = 1
+vertical_alignment = 1

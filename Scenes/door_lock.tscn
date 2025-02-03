@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ehi0s0d0e0g7"]
+
+[ext_resource type="Script" path="res://Scripts/door_lock.gd" id="1_cql56"]
+[ext_resource type="Texture2D" uid="uid://c51rlrvdnxkib" path="res://Art/Utilities/ship_lockClosed.png" id="2_5fw27"]
+[ext_resource type="Texture2D" uid="uid://c4al4n6og3bnb" path="res://Art/Utilities/ship_lockClosedActive.png" id="4_gujtw"]
+[ext_resource type="Texture2D" uid="uid://2thb2ct702yj" path="res://Art/Utilities/ship_lockOpen.png" id="5_vmjt6"]
+[ext_resource type="Texture2D" uid="uid://c68rb3bcurwjn" path="res://Art/Utilities/ship_lockOpenActive.png" id="6_1m8b8"]
+
+[node name="DoorLock" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cql56")
+
+[node name="lock_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 133.0
+offset_bottom = 130.0
+disabled = true
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("2_5fw27")
+texture_disabled = ExtResource("4_gujtw")
+
+[node name="unlock_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_right = 346.0
+offset_bottom = 130.0
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("5_vmjt6")
+texture_disabled = ExtResource("6_1m8b8")
+
+[connection signal="pressed" from="lock_button" to="." method="_on_door_lock_button_pressed"]
+[connection signal="pressed" from="unlock_button" to="." method="_on_door_unlock_button_pressed"]

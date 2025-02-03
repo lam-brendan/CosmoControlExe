@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpsrg0scwkxjn"]
+
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="1_jncyd"]
+[ext_resource type="Texture2D" uid="uid://dx7xgx5mfi1qq" path="res://Art/Aliens/Horned/deer_yes1.png" id="1_xmvlp"]
+[ext_resource type="Texture2D" uid="uid://ce2o1d67vpcsl" path="res://Art/SpeciesSymbol/SpeciesSymbol_Artiodactyl.png" id="2_h2pio"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="4_1a64b"]
+
+[node name="Page29" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jncyd")
+theme_override_font_sizes/font_size = 40
+text = "Artiodacytls"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+offset_top = 4.0
+offset_right = 620.0
+offset_bottom = 624.0
+texture = ExtResource("1_xmvlp")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 0
+offset_left = 441.0
+offset_top = -5.0
+offset_right = 615.0
+offset_bottom = 170.0
+texture = ExtResource("2_h2pio")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1a64b")
+theme_override_font_sizes/font_size = 20
+text = "29"
+horizontal_alignment = 1
+vertical_alignment = 1

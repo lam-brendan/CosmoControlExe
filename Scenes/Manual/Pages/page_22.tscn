@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxym2gsv0onai"]
+
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="1_e7lgg"]
+[ext_resource type="FontFile" uid="uid://chdx0rgxtl8rn" path="res://fonts/TT Interphases Pro Trial Italic.ttf" id="2_bcv6w"]
+[ext_resource type="FontFile" uid="uid://dyobdtv742aeo" path="res://fonts/TT Interphases Pro Trial Bold Italic.ttf" id="3_nq3l6"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="4_yehcs"]
+
+[node name="Page22" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 77.0
+offset_top = 350.0
+offset_right = 77.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("1_e7lgg")
+theme_override_fonts/italics_font = ExtResource("2_bcv6w")
+theme_override_fonts/bold_italics_font = ExtResource("3_nq3l6")
+theme_override_fonts/bold_font = ExtResource("4_yehcs")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "
+[b]Species Name:[/b] Marquatics
+
+[b]Characteristics[/b]: Marquatic Species type of alien tend to foster aquatic features such as fins, gills, tentacles etc.
+
+[b]About:[/b] Despite their aquatic nature, these species have evolved to be able to breathe out of the water. Though, there are reports of Marine aliens losing their water content from being out of the water for too long, and appear to be shriveled up at times, similar to how Offalis species expose themselves to water for extended periods of time.
+
+Please refrain from making any remarks regarding their loss of water content.
+
+[b]NOTE:[/b] Marquatic aliens can come in any hues, but can [b][i]never be prominently gray.[/i][/b]"
+
+[node name="PageNum" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_e7lgg")
+theme_override_font_sizes/font_size = 20
+text = "22"
+horizontal_alignment = 1
+vertical_alignment = 1

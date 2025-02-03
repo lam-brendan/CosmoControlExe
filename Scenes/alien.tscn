@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0kyfsrtu5ifk"]
+
+[ext_resource type="Script" path="res://Scripts/alien.gd" id="1_u4vqh"]
+
+[node name="alien" type="Node2D"]
+script = ExtResource("1_u4vqh")
+
+[node name="alien_sprite" type="Sprite2D" parent="."]
+position = Vector2(-350, 0)
+scale = Vector2(0.5, 0.5)

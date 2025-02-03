@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://dudegeunj2oqu"]
+
+[ext_resource type="Texture2D" uid="uid://dwwhha5uf15yl" path="res://Art/Utilities/ship_emergencyreport.png" id="1_bnhf7"]
+
+[sub_resource type="GDScript" id="GDScript_hnoeu"]
+script/source = "extends Control
+
+var is_emergency_button_pressed: bool = false
+var is_detained:bool = false
+var speed:int = 300
+@onready var Shutter = $EmergencyShutter
+@onready var DoorLock = $\"../DoorLock\"
+@onready var unlockButton = $\"../DoorLock/unlock_button\"
+@onready var alien = get_parent()
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	#print(Shutter.position.y)
+
+	if (is_emergency_button_pressed and DoorLock.is_door_locked):
+		unlockButton.texture_disabled = load(\"res://Art/Utilities/ship_lockOpen.png\")
+		unlockButton.disabled = true
+		Shutter.position.y += speed * delta
+		if (Shutter.position.y >= (get_viewport_rect().size.y *3)/4 - 40):
+			speed= speed*-1
+			set_process(false)
+			$ShutterTimer.start()
+
+		if(Shutter.position.y <= 0):
+			speed = speed *-1
+			is_emergency_button_pressed = false	
+
+# Main emergency  report button function and logic checker 
+func _on_emergency_report_button_pressed():
+	if(alien.alien_array[alien.curr_alien_i].position.x > get_viewport_rect().size.x / 2 + 351):
+		print(\"Not legal Emergency Report Button Pressed\")
+		is_emergency_button_pressed = false
+	else:
+		is_emergency_button_pressed = true
+		print(\"Emergency Report Button Pressed\")
+
+# Function that runs after the timer runs out
+func _on_shutter_timer_timeout():
+	var gameNodeScript = get_parent()
+	gameNodeScript.detain()
+	await get_tree().create_timer(1.4).timeout
+	
+	set_process(true)
+	$ShutterTimer.stop()
+"
+
+[node name="EmergencyReport" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_hnoeu")
+
+[node name="EmergencyReportButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 342.0
+offset_bottom = 360.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_bnhf7")
+texture_pressed = ExtResource("1_bnhf7")
+
+[node name="ShutterTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="pressed" from="EmergencyReportButton" to="." method="_on_emergency_report_button_pressed"]
+[connection signal="timeout" from="ShutterTimer" to="." method="_on_shutter_timer_timeout"]

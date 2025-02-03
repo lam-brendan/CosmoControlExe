@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpmgiytxxvfad"
+path="res://.godot/imported/Whale Death.mp3-798a31c2f1412a1b1beba1cba0b26c8b.mp3str"
+
+[deps]
+
+source_file="res://Audio/Whale Death.mp3"
+dest_files=["res://.godot/imported/Whale Death.mp3-798a31c2f1412a1b1beba1cba0b26c8b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

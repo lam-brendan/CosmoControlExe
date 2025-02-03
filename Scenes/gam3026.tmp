@@ -1,0 +1,221 @@
+[gd_scene load_steps=19 format=3 uid="uid://brb24fw4kgnco"]
+
+[ext_resource type="Texture2D" uid="uid://2oahden1suhk" path="res://Art/BG/bg_space2.png" id="1_5yufo"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_7aw47"]
+[ext_resource type="Texture2D" uid="uid://cgesxe5wp6d3y" path="res://Art/BG/ship_wall_merged.png" id="2_8p8df"]
+[ext_resource type="PackedScene" uid="uid://ehi0s0d0e0g7" path="res://Scenes/door_lock.tscn" id="3_h5qaw"]
+[ext_resource type="PackedScene" uid="uid://b0kyfsrtu5ifk" path="res://Scenes/alien.tscn" id="4_fdeiw"]
+[ext_resource type="Texture2D" uid="uid://bmakx7hfwxm7f" path="res://Art/Utilities/ship_guidebook.png" id="5_hltm5"]
+[ext_resource type="PackedScene" uid="uid://dyxxr6l5pv8pk" path="res://Scenes/menu_options.tscn" id="7_mwfdu"]
+[ext_resource type="PackedScene" uid="uid://dudegeunj2oqu" path="res://Scenes/emergency_report.tscn" id="7_vpnll"]
+[ext_resource type="Texture2D" uid="uid://clemfda3d4n7q" path="res://Art/Utilities/ship_wall_shutter.png" id="8_w2sy0"]
+[ext_resource type="PackedScene" uid="uid://cxexuwdjxvoj7" path="res://Scenes/document/alien_document.tscn" id="9_ekdtd"]
+[ext_resource type="Script" path="res://Scripts/document/documents.gd" id="9_fj15e"]
+[ext_resource type="PackedScene" uid="uid://dsi34eu13xsro" path="res://Scenes/document/id_card.tscn" id="11_p57cy"]
+[ext_resource type="Texture2D" uid="uid://cnkf413q35df1" path="res://Art/BG/ship_slot_closed.png" id="12_eojjw"]
+[ext_resource type="Texture2D" uid="uid://n1fmxf255hya" path="res://Art/Utilities/ship_calendar_example.png" id="13_2ubi3"]
+[ext_resource type="Texture2D" uid="uid://bbvodpnkrwboj" path="res://Art/Utilities/ship_faxmachine.png" id="14_amq3n"]
+[ext_resource type="AudioStream" uid="uid://cthmibx8a437a" path="res://Audio/KillSound.mp3" id="16_w8pql"]
+[ext_resource type="BitMap" uid="uid://cqyrpjc1cp38i" path="res://Art/Utilities/fax machine click mask.png" id="17_hwa8d"]
+[ext_resource type="Texture2D" uid="uid://c73rd1klmxr3u" path="res://Art/Doc/beige.png" id="18_ets6e"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_7aw47")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="space_texture" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 3840.0
+offset_bottom = 2160.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5yufo")
+
+[node name="ship_wall_texture" type="TextureRect" parent="Control"]
+z_index = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_8p8df")
+
+[node name="DoorLock" parent="." instance=ExtResource("3_h5qaw")]
+z_index = 3
+offset_left = 1712.0
+offset_top = 445.0
+offset_right = 1712.0
+offset_bottom = 445.0
+scale = Vector2(0.5, 0.5)
+
+[node name="alien" parent="." instance=ExtResource("4_fdeiw")]
+z_index = 1
+position = Vector2(1, 500)
+
+[node name="ManualToggle" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = 486.0
+offset_right = 240.0
+offset_bottom = 549.0
+
+[node name="book" type="Button" parent="ManualToggle"]
+z_index = 3
+layout_mode = 0
+offset_left = 40.48
+offset_top = 18.335
+offset_right = 436.48
+offset_bottom = 117.335
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("5_hltm5")
+flat = true
+
+[node name="ManualControl" type="Control" parent="."]
+z_index = 7
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="menu_options" parent="CanvasLayer" instance=ExtResource("7_mwfdu")]
+visible = false
+
+[node name="EmergencyReport" parent="." instance=ExtResource("7_vpnll")]
+z_index = 3
+offset_left = 1708.0
+offset_top = 195.0
+offset_right = 1708.0
+offset_bottom = 195.0
+
+[node name="EmergencyShutter" type="Node2D" parent="EmergencyReport"]
+
+[node name="Shutter" type="Sprite2D" parent="EmergencyReport/EmergencyShutter"]
+z_index = -1
+position = Vector2(-750, -564)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_w2sy0")
+
+[node name="documents" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("9_fj15e")
+
+[node name="alien_document" parent="documents" instance=ExtResource("9_ekdtd")]
+visible = false
+layout_mode = 1
+offset_left = 998.0
+offset_top = 992.0
+offset_right = 998.0
+offset_bottom = 992.0
+
+[node name="id_card" parent="documents" instance=ExtResource("11_p57cy")]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 625.0
+offset_top = 1039.0
+offset_right = 625.0
+offset_bottom = 1039.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ShipSlot" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(961, 828)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_eojjw")
+
+[node name="ShipCalendarExample" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(148, 300)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_2ubi3")
+
+[node name="Lights" type="DirectionalLight2D" parent="."]
+energy = 0.0
+blend_mode = 1
+
+[node name="DetainSoundEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_w8pql")
+
+[node name="FaxControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1750.0
+offset_top = 850.0
+offset_right = 1750.0
+offset_bottom = 850.0
+
+[node name="ShipFaxmachine" type="TextureButton" parent="FaxControl"]
+z_index = 3
+layout_mode = 0
+offset_left = -262.0
+offset_top = -183.0
+offset_right = 602.0
+offset_bottom = 622.0
+scale = Vector2(0.5, 0.5)
+disabled = true
+texture_normal = ExtResource("14_amq3n")
+texture_click_mask = ExtResource("17_hwa8d")
+
+[node name="FaxMessage" type="Control" parent="FaxControl/ShipFaxmachine"]
+visible = false
+layout_mode = 1
+anchor_left = -2.514
+anchor_top = -1.332
+anchor_right = 0.056
+anchor_bottom = 0.082
+offset_left = 0.0961914
+offset_top = 0.26001
+offset_right = -0.384003
+offset_bottom = -0.0100021
+
+[node name="FaxPaper" type="TextureRect" parent="FaxControl/ShipFaxmachine/FaxMessage"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.007
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -6.0
+offset_right = 2232.46
+offset_bottom = 1148.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_ets6e")
+
+[node name="Text" type="Label" parent="FaxControl/ShipFaxmachine/FaxMessage/FaxPaper"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.363
+offset_bottom = 1448.0
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ExitFaxMessageButton" type="Button" parent="FaxControl/ShipFaxmachine/FaxMessage/FaxPaper"]
+layout_mode = 0
+offset_left = 4212.0
+offset_top = 4.0
+offset_right = 4464.0
+offset_bottom = 224.0
+theme_override_font_sizes/font_size = 100
+text = "X"
+
+[connection signal="pressed" from="FaxControl/ShipFaxmachine" to="." method="_on_ship_faxmachine_pressed"]
+[connection signal="pressed" from="FaxControl/ShipFaxmachine/FaxMessage/FaxPaper/ExitFaxMessageButton" to="." method="_on_exit_fax_message_button_pressed"]

@@ -1,0 +1,382 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk4tau5hsbl38"]
+
+[ext_resource type="Script" path="res://Scripts/page_2.gd" id="1_jvlj6"]
+[ext_resource type="FontFile" uid="uid://c1057dmhn6pcc" path="res://fonts/TT Interphases Pro Trial Bold.ttf" id="2_hinv8"]
+[ext_resource type="FontFile" uid="uid://btjeeltif17t3" path="res://fonts/TT Interphases Pro Trial Medium.ttf" id="2_qiepo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lm60u"]
+bg_color = Color(0.341176, 0.623529, 1, 0.764706)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13byb"]
+
+[node name="Page2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jvlj6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 800.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hinv8")
+theme_override_font_sizes/font_size = 40
+text = "Table of Contents:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 7
+columns = 2
+
+[node name="Operations" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 23
+text = "Section 1: Operations......................................................"
+scroll_active = false
+
+[node name="ButtonOperation" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "3"
+
+[node name="Workstation" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Section 1.1: Workstation..............................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonWorkstation" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "4"
+
+[node name="StarSector" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 23
+text = "Section 2: Star Sectors....................................................."
+scroll_active = false
+
+[node name="ButtonStarsector" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "13"
+
+[node name="Species" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 23
+text = "Section 3: Species............................................................."
+scroll_active = false
+
+[node name="ButtonSpecies" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "19"
+
+[node name="Marquatics" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Marquatics......................................................................................"
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonMarquatics" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "21"
+
+[node name="Offalis" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Offalis.............................................................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonOffalis" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "23"
+
+[node name="Amorphia" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Amorphia........................................................................................"
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonAmorphia" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "25"
+
+[node name="Ancient" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Ancient............................................................................................"
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonAncient" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "27"
+
+[node name="Artiodactyl" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Artiodacytls...................................................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonArtiodactyl" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "29"
+
+[node name="Foliaceous" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Foliaceous......................................................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonFoliaceous" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "31"
+
+[node name="Mechanica" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Mechanica......................................................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonMechanica" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "33"
+
+[node name="Documents" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 23
+text = "Section 4: Documents.....................................................
+"
+scroll_active = false
+
+[node name="ButtonDocuments" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "35"
+
+[node name="Fields" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Section 4.1: Document Fields......................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonsFields" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "37"
+
+[node name="Stamps" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Section 4.2: Stamps......................................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonStamps" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "39"
+
+[node name="Sequence" type="RichTextLabel" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qiepo")
+theme_override_font_sizes/normal_font_size = 18
+text = "	Section 4.3: Pattern Sequences..................................................."
+scroll_active = false
+tab_size = 12
+
+[node name="ButtonSequence" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qiepo")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/hover = SubResource("StyleBoxFlat_lm60u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13byb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_13byb")
+text = "41"
